@@ -1,0 +1,251 @@
+/* Variables de color para fácil mantenimiento y basada en tu logo */
+:root {
+    --carisma-green: #228B22; /* Un verde más intenso y brillante */
+    --carisma-light-green: #e9f5e9; /* Un verde muy claro para fondos alternos */
+    --carisma-yellow: #FFD700; /* Amarillo limón, vibrante */
+    --carisma-dark: #34495e; /* Un gris oscuro azulado */
+    --light-bg: #f8f9fa;
+    --white-bg: #ffffff;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 72px; /* Espacio para el Navbar fijo */
+    background-color: var(--light-bg); /* Fondo general claro */
+}
+
+/* Clases de color personalizadas para Bootstrap */
+.text-carisma-green {
+    color: var(--carisma-green) !important;
+}
+
+.bg-carisma-green {
+    background-color: var(--carisma-green) !important;
+}
+
+.bg-carisma-light-green {
+    background-color: var(--carisma-light-green) !important;
+}
+
+.bg-carisma-yellow {
+    background-color: var(--carisma-yellow) !important;
+}
+
+.text-carisma-yellow {
+    color: var(--carisma-yellow) !important;
+}
+
+.bg-carisma-dark {
+    background-color: var(--carisma-dark) !important;
+}
+
+/* Botones con colores Carisma */
+.btn-carisma-green {
+    background-color: var(--carisma-green);
+    border-color: var(--carisma-green);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-carisma-green:hover {
+    background-color: #1a6d1a; /* Un verde más oscuro al pasar el mouse */
+    border-color: #1a6d1a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.btn-outline-carisma-green {
+    color: var(--carisma-green);
+    border-color: var(--carisma-green);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-outline-carisma-green:hover {
+    background-color: var(--carisma-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-carisma-yellow {
+    background-color: var(--carisma-yellow);
+    border-color: var(--carisma-yellow);
+    color: var(--carisma-dark); /* Texto oscuro para contraste */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-carisma-yellow:hover {
+    background-color: #e0b400; /* Un amarillo más oscuro */
+    border-color: #e0b400;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: var(--carisma-dark);
+}
+
+#img1{
+    border-radius: 25px;
+}
+
+/* Navbar Personalizado */
+.navbar {
+    background-color: var(--carisma-green);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar .nav-link {
+    color: black;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: white;
+}
+
+.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Estilo del divider personalizado */
+.divider-carisma-green {
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--carisma-green);
+    border: none;
+    opacity: 1;
+}
+
+.divider-light {
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border: none;
+    opacity: 1;
+}
+
+/* Secciones de Contenido */
+.page-section {
+    padding: 8rem 0;
+    position: relative; /* Para animaciones */
+}
+
+/* Hero Section (Masthead) */
+.masthead {
+    /* **IMPORTANTE: Reemplaza 'fondo-carisma.jpg' con la ruta real de tu imagen de fondo** */
+    background: url('../img/hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex; /* Centrar contenido verticalmente */
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra para mejor lectura del texto blanco */
+}
+
+.masthead h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    .masthead h1 {
+        font-size: 4.5rem;
+    }
+}
+
+/* Estilos para Tarjetas y Sombras */
+.card {
+    border-radius: 0.75rem; /* Bordes más suaves */
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08); /* Sombra base sutil */
+}
+
+/* Efecto de hover para todas las tarjetas */
+.card-hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-8px); /* Levantar más al pasar el mouse */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important; /* Sombra más pronunciada */
+}
+
+/* Product Cards específicos */
+.product-card .card-img-top {
+    height: 200px; /* Altura fija para imágenes de producto */
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+}
+
+.product-card .card-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* List Group en tarjetas de características/beneficios */
+.list-group-item {
+    background-color: transparent;
+    border-color: rgba(0,0,0,0.05); /* Separadores sutiles */
+    font-weight: 400;
+}
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background-image: linear-gradient(rgba(34, 139, 34, 0.85), rgba(34, 139, 34, 0.85)), url('fondo-carisma-secundario.jpg'); /* Imagen de fondo para CTA, similar al hero */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax effect */
+}
+
+/* Formulario de Contacto */
+#contactForm .form-floating label {
+    color: var(--carisma-green);
+}
+
+#contactForm .form-control:focus {
+    border-color: var(--carisma-green);
+    box-shadow: 0 0 0 0.25rem rgba(34, 139, 34, 0.25);
+}
+
+
+/* --- Animaciones CSS --- */
+
+/* 1. Animación de Desvanecimiento (Fade In) para el Hero */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.8s ease-out forwards;
+}
+
+/* 2. Clase inicial para elementos que se animarán al hacer scroll (la magia JS está en scripts.js) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(60px); /* Un poco más de desplazamiento */
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out; /* Transición más larga */
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Iconos de las listas */
+.list-group-item i {
+    font-size: 1.3rem; /* Tamaño de icono */
+    line-height: 1;
+}
